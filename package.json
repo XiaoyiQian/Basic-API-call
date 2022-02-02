@@ -1,0 +1,24 @@
+{
+  "name": "basic-api-call",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XiaoyiQian/Basic-API-call.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XiaoyiQian/Basic-API-call/issues"
+  },
+  "homepage": "https://github.com/XiaoyiQian/Basic-API-call#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.2.0",
+    "nodemon": "^2.0.15"
+  }
+}
