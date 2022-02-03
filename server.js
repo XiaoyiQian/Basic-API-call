@@ -1,10 +1,17 @@
+// require('dotenv').config()
+
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/subscribers')
+mongoose.connect('mongodb://localhost:27017/subscribers')
 const db = mongoose.connection
-db.on('error', () => console.log('Connectted to Database'))
-db.once('open', () => console.log('Server Started'))
+db.on('error', (error) => console.error(error))
+db.once('open', () => console.log('Connected to Database'))
 
-app.listen(300, () => console.log('Server Started'))
+app.use(express.json())
+
+const subscribersRouter = require('./routes/subscribers')
+app.use('/subscribers', subscribersRouter)
+
+app.listen(3000, () => console.log('Server Started'))
